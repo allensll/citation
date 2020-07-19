@@ -124,10 +124,6 @@ class HepPhDataset(InMemoryDataset):
         if self.pre_transform is not None:
             data_list = [self.pre_transform(data) for data in data_list]
 
-
-
-
-
         torch.save(self.collate(data_list), self.processed_paths[0])
 
     def __repr__(self):
